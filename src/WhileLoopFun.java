@@ -66,11 +66,11 @@ public class WhileLoopFun {
      Precondition: number > 0, threshold > 0
      */
     public int maxDoubles(int number, int threshold) {
-        int count = 0;
-        int multiple = 1;
+        int count = -1;
+        int multiple = number;
         while (multiple <= threshold) {
-            multiple *= number;
             count ++;
+            multiple *= 2;
         }
         return count;
     }
